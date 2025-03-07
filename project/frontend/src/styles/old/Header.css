@@ -1,0 +1,87 @@
+/* Header Styles */
+.header {
+  background-color: #0b0b1d; /* Dark background */
+  padding: 10px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1700px;
+}
+
+/* Logo */
+.logo img {
+  height: 150px;
+}
+
+/* Navigation */
+.nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+  color: #ff007a; /* Highlight color */
+}
+
+/* CTA Buttons */
+.cta-buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.sign-in-button {
+  background: none;
+  color: white;
+  border: 2px solid white;
+  padding: 10px 60px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.sign-in-button:hover {
+  background: white;
+  color: #0b0b1d;
+}
+
+.get-started-button {
+  background: white;
+  color: #0b0b1d;
+  padding: 10px 60px;
+  border: none;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.get-started-button:hover {
+  background: #ff007a;
+  color: white;
+}

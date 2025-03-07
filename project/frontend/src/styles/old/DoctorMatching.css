@@ -1,0 +1,58 @@
+.doctors-container {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #1e3c72, #2a5298);
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.doctor-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 10px 0;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.doctor-card h3 {
+  color: #ffd700;
+}
+
+.doctor-card button {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.email-modal {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 500px;
+  background: white;
+  color: #1e3c72;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.email-modal button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #ffd700;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}

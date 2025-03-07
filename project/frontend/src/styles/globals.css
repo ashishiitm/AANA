@@ -1,0 +1,126 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Theme Variables */
+:root {
+  /* Light Theme */
+  --color-primary: #2563eb;
+  --color-primary-light: #3b82f6;
+  --color-primary-dark: #1d4ed8;
+  
+  --color-secondary: #50c878;
+  --color-secondary-light: #6ee7a0;
+  --color-secondary-dark: #45a663;
+  
+  --color-text: #1f2937;
+  --color-text-light: #6b7280;
+  --color-text-dark: #111827;
+  
+  --color-bg: #f5f7fa;
+  --color-card: #ffffff;
+  --color-border: #e5e7eb;
+
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 2rem;
+  --space-lg: 4rem;
+}
+
+/* Base Styles */
+@layer base {
+  body {
+    @apply bg-background text-text font-sans transition-colors duration-300;
+  }
+  
+  h1 {
+    @apply text-4xl font-bold mb-4;
+  }
+  
+  h2 {
+    @apply text-3xl font-bold mb-3;
+  }
+  
+  h3 {
+    @apply text-2xl font-bold mb-2;
+  }
+  
+  h4 {
+    @apply text-xl font-bold mb-1;
+  }
+  
+  a {
+    @apply text-primary hover:text-primary-dark transition-colors duration-300;
+  }
+}
+
+/* Custom Components */
+@layer components {
+  /* Buttons */
+  .btn {
+    @apply px-4 py-2 rounded font-medium transition-all duration-300 inline-flex items-center justify-center;
+  }
+  
+  .btn-primary {
+    @apply btn bg-primary text-white hover:bg-primary-dark;
+  }
+  
+  .btn-secondary {
+    @apply btn bg-secondary text-white hover:bg-secondary-dark;
+  }
+  
+  .btn-outline {
+    @apply btn border border-primary text-primary hover:bg-primary hover:text-white;
+  }
+  
+  /* Cards */
+  .card {
+    @apply bg-background-card rounded-lg shadow-card p-6 transition-all duration-300;
+  }
+  
+  .card:hover {
+    @apply shadow-hover transform -translate-y-1;
+  }
+  
+  /* Form Elements */
+  .input-group {
+    @apply relative w-full;
+  }
+  
+  .input {
+    @apply w-full px-4 py-2 border border-border rounded focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-primary transition-all duration-300;
+  }
+  
+  .input-icon {
+    @apply absolute left-3 top-1/2 -translate-y-1/2 text-text-light;
+  }
+  
+  .input-with-icon {
+    @apply pl-10;
+  }
+  
+  /* Layout */
+  .container-custom {
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full;
+  }
+  
+  /* Animations */
+  .fade-in {
+    animation: fadeIn 0.5s ease-in-out;
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+  
+  .slide-up {
+    animation: slideUp 0.5s ease-in-out;
+  }
+  
+  @keyframes slideUp {
+    from { transform: translateY(20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+} 

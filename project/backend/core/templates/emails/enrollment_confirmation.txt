@@ -1,0 +1,27 @@
+Dear {{ name }},
+
+Thank you for your interest in participating in our clinical trial (NCT ID: {{ nct_id }}).
+
+Study Details:
+Title: {{ study_title }}
+
+Brief Description:
+{{ brief_description }}
+
+Eligibility Criteria:
+
+Inclusion Criteria:
+{{ inclusion_criteria }}
+
+Exclusion Criteria:
+{{ exclusion_criteria }}
+
+Our research team will review your application and contact you if you meet the eligibility criteria for this study. Please note that submission of this form does not guarantee enrollment in the trial.
+
+If you have any questions, please don't hesitate to contact us.
+
+Best regards,
+Clinical Trial Research Team
+
+---
+This is an automated message. Please do not reply to this email. 

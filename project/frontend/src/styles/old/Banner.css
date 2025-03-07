@@ -1,0 +1,36 @@
+/* Banner.css */
+.banner-container {
+  width: 100%;
+  height: 200px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: linear-gradient(90deg, #ff7a29, #ff007a, #8a00ff); /* Gradient */
+  color: white;
+}
+
+.banner-text {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.banner-button {
+  background: white;
+  color: #ff007a;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 14px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  width: 200px;
+}
+
+.banner-button:hover {
+  background: #ff007a;
+  color: white;
+}

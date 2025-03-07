@@ -1,0 +1,6 @@
+[
+  { "name": "United States", "dial_code": "+1", "code": "US", "flag": "🇺🇸" },
+  { "name": "Canada", "dial_code": "+1", "code": "CA", "flag": "🇨🇦" },
+  { "name": "United Kingdom", "dial_code": "+44", "code": "GB", "flag": "🇬🇧" },
+  { "name": "India", "dial_code": "+91", "code": "IN", "flag": "🇮🇳" }
+]

@@ -1,0 +1,68 @@
+
+.circle-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  background: #001f3f; /* Navy blue background */
+  border-radius: 50%;
+  margin: 2rem auto;
+  overflow: hidden;
+}
+
+.human {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
+
+.human img {
+  width: 100px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.agent {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  z-index: 2;
+  animation: fadeIn 1s ease-out;
+}
+
+.agent img {
+  width: 60px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.arrow {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform-origin: left center;
+  height: 2px;
+  background: white;
+  z-index: 1;
+  animation: fadeIn 1s ease-out;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: 5px solid transparent;
+  border-left-color: white;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

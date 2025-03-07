@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover Active Trials</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #1e3a8a;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            text-align: center;
+        }
+        h1 {
+            color: white;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            width: 200px;
+        }
+        select {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+        }
+        button {
+            padding: 10px;
+            background-color: #facc15;
+            border: none;
+            border-radius: 4px;
+            color: black;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #e5b800;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Discover Active Trials</h1>
+        <form method="get" action="/search/">
+            <select name="condition">
+                <option value="">Select Condition</option>
+            </select>
+            <select name="location">
+                <option value="">Select Location</option>
+            </select>
+            <select name="phase">
+                <option value="">Select Phase</option>
+            </select>
+            <button type="submit">Search</button>
+        </form>
+    </div>
+</body>
+</html>

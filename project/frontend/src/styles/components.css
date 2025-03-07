@@ -1,0 +1,212 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .fade-in {
+    @apply opacity-0 animate-[fadeIn_0.5s_ease-in_forwards];
+  }
+
+  .shadow-card {
+    @apply shadow-md hover:shadow-lg transition-shadow duration-300;
+  }
+
+  .shadow-hover {
+    @apply shadow-lg;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium shadow-sm;
+  }
+
+  .btn-secondary {
+    @apply px-4 py-2 bg-gray-100 text-gray-800 rounded-lg hover:bg-gray-200 transition-colors duration-200 font-medium border border-gray-300;
+  }
+
+  .input {
+    @apply px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent;
+  }
+
+  .input-with-icon {
+    @apply pl-10;
+  }
+
+  .border-primary {
+    @apply border-blue-500;
+  }
+
+  .search-input {
+    @apply px-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent pl-10;
+  }
+}
+
+/* Search Component Styles */
+.search-container {
+  @apply bg-background p-8 rounded-lg max-w-6xl mx-auto;
+}
+
+.hero {
+  @apply mb-8 p-8 bg-blue-50 rounded-lg shadow-card text-center;
+}
+
+.hero-title {
+  @apply text-4xl font-bold text-text-dark mb-2 drop-shadow-sm;
+}
+
+.hero-subtitle {
+  @apply text-xl text-text-light mb-4;
+}
+
+.hero-image {
+  @apply max-w-full h-auto rounded-lg shadow-card;
+}
+
+.search-form {
+  @apply flex gap-4 my-6 items-center flex-wrap md:flex-nowrap;
+}
+
+.search-input-wrapper {
+  @apply relative flex-grow;
+}
+
+.search-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-primary;
+}
+
+.search-button {
+  @apply btn-primary;
+}
+
+.search-button.nlp {
+  @apply btn-secondary;
+}
+
+.trial-showcase {
+  @apply bg-white p-6 rounded-lg shadow-card mt-8 fade-in;
+}
+
+.trial-title {
+  @apply text-2xl font-bold text-text-dark mb-4 drop-shadow-sm;
+}
+
+.brief-summary {
+  @apply my-4 text-text leading-relaxed;
+}
+
+.show-more {
+  @apply text-primary cursor-pointer underline hover:text-primary-dark transition-colors;
+}
+
+.trial-boxes {
+  @apply flex gap-6 mt-6 flex-wrap justify-center;
+}
+
+.box {
+  @apply flex-1 min-w-[250px] max-w-[300px] bg-blue-50 p-6 rounded-lg shadow-card transition-all duration-300 hover:shadow-hover hover:-translate-y-1;
+}
+
+.box h4 {
+  @apply m-0 mb-2 text-text-dark text-xl font-bold;
+}
+
+.one-click-search {
+  @apply btn-secondary mt-6;
+}
+
+.view-options {
+  @apply mt-8 flex gap-4 justify-center flex-wrap;
+}
+
+.view-button {
+  @apply px-4 py-2 border border-primary bg-transparent rounded-lg cursor-pointer transition-all duration-300 flex items-center gap-2 text-base hover:bg-primary hover:text-white hover:scale-105;
+}
+
+.list-view {
+  @apply bg-blue-50;
+}
+
+.map-view {
+  @apply bg-green-50;
+}
+
+.loading, .error {
+  @apply p-4 bg-white rounded-lg shadow-card my-4;
+}
+
+.error {
+  @apply text-red-600 bg-red-50;
+}
+
+.footer {
+  @apply mt-8 p-4 bg-background-dark text-white rounded-b-lg text-center;
+}
+
+.social-links {
+  @apply flex justify-center gap-4 mt-2;
+}
+
+.social-links a {
+  @apply text-white opacity-80 hover:opacity-100 transition-opacity;
+}
+
+/* Modal Styles */
+.modal-content {
+  @apply p-6 max-w-2xl max-h-[80vh] overflow-auto rounded-lg;
+}
+
+.modal-content h2 {
+  @apply text-2xl font-bold mb-4 text-text-dark;
+}
+
+.modal-close-button {
+  @apply btn-primary mt-4;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .search-container {
+    @apply p-4;
+  }
+  
+  .hero {
+    @apply p-4;
+  }
+  
+  .hero-title {
+    @apply text-3xl;
+  }
+  
+  .hero-subtitle {
+    @apply text-lg;
+  }
+  
+  .search-form {
+    @apply flex-col;
+  }
+  
+  .search-input {
+    @apply w-full;
+  }
+  
+  .search-button {
+    @apply w-full;
+  }
+  
+  .trial-boxes {
+    @apply flex-col;
+  }
+  
+  .box {
+    @apply max-w-full;
+  }
+  
+  .view-options {
+    @apply flex-col;
+  }
+  
+  .view-button {
+    @apply w-full;
+  }
+} 

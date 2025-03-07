@@ -1,0 +1,8 @@
+[
+  { "name": "Professional AI", "image": "/images/avatar1.png", "role": "Data Scientist" },
+  { "name": "Analyst AI", "image": "/images/avatar2.png", "role": "Financial Analyst" },
+  { "name": "Executive AI", "image": "/images/avatar3.png", "role": "Sales Development Rep" },
+  { "name": "Support AI", "image": "/images/avatar4.png", "role": "AI Support Agent" },
+  { "name": "Business AI", "image": "/images/avatar5.png", "role": "Recruiter" },
+  { "name": "Tech AI", "image": "/images/avatar6.png", "role": "Cybersecurity Specialist" }
+]

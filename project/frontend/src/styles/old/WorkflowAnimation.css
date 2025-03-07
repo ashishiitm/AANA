@@ -1,0 +1,111 @@
+/* Workflow Section */
+.workflow-section {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: #0b0b1d; /* Dark background */
+}
+
+/* Heading Style */
+.workflow-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 30px;
+}
+
+/* Workflow Container */
+.workflow-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  padding: 3rem;
+  border-radius: 15px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Agent Styling */
+.agent-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+}
+
+.agent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 150px;
+  height: 150px;
+  opacity: 0.3;
+  transition: opacity 1s ease, transform 0.5s ease;
+}
+
+.agent.active {
+  opacity: 1;
+  transform: scale(1.2);
+}
+
+.agent img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+}
+
+/* Arrows Between Agents */
+.arrow {
+  font-size: 2.5rem;
+  color: #888;
+  opacity: 0;
+  transition: opacity 1s ease;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.arrow.visible {
+  opacity: 1;
+}
+
+/* Two-way arrow animation between Agent and Data Source */
+.double-arrow {
+  font-size: 2rem;
+  color: #2563eb;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  animation: bounce 1s infinite alternate ease-in-out;
+}
+
+.double-arrow.active {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(-5px);
+  }
+  to {
+    transform: translateY(5px);
+  }
+}
+
+/* Data Source Styling */
+.data-source {
+  width: 120px;
+  height: 90px;
+  opacity: 0.3;
+  transition: opacity 1s ease;
+}
+
+.data-source img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.data-source.active {
+  opacity: 1;
+}

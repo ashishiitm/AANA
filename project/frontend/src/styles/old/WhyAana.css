@@ -1,0 +1,79 @@
+/* New Banner Section */
+.new-banner {
+  background-color: #0b0b1d;
+  padding: 80px 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.new-banner-content {
+  display: flex;
+  max-width: 1200px;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 40px;
+}
+
+/* Left Side - Text */
+.new-banner-text {
+  color: white;
+  max-width: 500px;
+}
+
+.subheading {
+  color: #00b354;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.heading {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+.feature-icon {
+  width: 30px;
+}
+
+.new-banner-text p {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 20px;
+}
+
+/* Call-to-Action Button */
+.cta-button {
+  background: white;
+  color: #0b0b1d;
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 12px 24px;
+  border-radius: 50px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+  background: #ff007a;
+  color: white;
+}
+
+/* Right Side - Image */
+.new-banner-image img {
+  width: 450px;
+  border-radius: 10px;
+}

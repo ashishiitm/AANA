@@ -1,0 +1,115 @@
+
+.slide-animation {
+  position: relative;
+  width: 300px;
+  height: 300px;
+}
+
+/* CENTRAL RING */
+/* Always centered using translate(-50%, -50%) */
+.central-ring {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: -75px;
+  margin-top: -75px;
+  border: 5px solid;
+  border-radius: 50%;
+  /* First, the central ring grows (1.5s) then pulses continuously */
+  animation: centralGrow 1.5s ease-out forwards, centralPulse 3s ease-in-out infinite 1.5s;
+}
+
+/* OUTER RINGS CONTAINER */
+.outer-rings {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 300px;
+  height: 300px;
+  transform: translate(-50%, -50%);
+}
+
+/* Outer ring wrappers: position each outer ring along a circle (radius = 130px) */
+.outer-ring-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 0;
+  height: 0;
+}
+.outer-ring-wrapper-1 { transform: rotate(0deg) translate(130px); }
+.outer-ring-wrapper-2 { transform: rotate(60deg) translate(130px); }
+.outer-ring-wrapper-3 { transform: rotate(120deg) translate(130px); }
+.outer-ring-wrapper-4 { transform: rotate(180deg) translate(130px); }
+.outer-ring-wrapper-5 { transform: rotate(240deg) translate(130px); }
+.outer-ring-wrapper-6 { transform: rotate(300deg) translate(130px); }
+
+/* OUTER RINGS */
+/* Start hidden (scale 0 and opacity 0) then appear and pulse */
+.outer-ring {
+  width: 60px;
+  height: 60px;
+  border: 3px solid;
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  opacity: 0;
+  animation: outerAppear 0.8s ease-out forwards, outerPulse 3s ease-in-out infinite;
+}
+
+/* Apply sequential delays to each outer ring so they appear one-by-one */
+.outer-ring-wrapper-1 .outer-ring { animation-delay: 2s, 2s; }
+.outer-ring-wrapper-2 .outer-ring { animation-delay: 2.5s, 2.5s; }
+.outer-ring-wrapper-3 .outer-ring { animation-delay: 3s, 3s; }
+.outer-ring-wrapper-4 .outer-ring { animation-delay: 3.5s, 3.5s; }
+.outer-ring-wrapper-5 .outer-ring { animation-delay: 4s, 4s; }
+.outer-ring-wrapper-6 .outer-ring { animation-delay: 4.5s, 4.5s; }
+
+/* Fluorescent border colors for each outer ring */
+.outer-ring-wrapper-1 .outer-ring { border-color: #39FF14; } /* Neon green */
+.outer-ring-wrapper-2 .outer-ring { border-color: #FF6EC7; } /* Neon pink */
+.outer-ring-wrapper-3 .outer-ring { border-color: #1F51FF; } /* Neon blue */
+.outer-ring-wrapper-4 .outer-ring { border-color: #FFFF33; } /* Neon yellow */
+.outer-ring-wrapper-5 .outer-ring { border-color: #FF5F1F; } /* Neon orange */
+.outer-ring-wrapper-6 .outer-ring { border-color: #B026FF; } /* Neon purple */
+
+/* KEYFRAMES */
+
+/* Central ring grows from 0.5 to full size */
+@keyframes centralGrow {
+  from {
+    transform: translate(-50%, -50%) scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Central ring pulses slightly */
+@keyframes centralPulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.05); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}
+
+/* Outer ring appearance: from invisible to full size */
+@keyframes outerAppear {
+  from {
+    transform: translate(-50%, -50%) scale(0);
+    opacity: 0;
+  }
+  to {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+}
+
+/* Outer rings then pulse continuously */
+@keyframes outerPulse {
+  0% { transform: translate(-50%, -50%) scale(1); }
+  50% { transform: translate(-50%, -50%) scale(1.1); }
+  100% { transform: translate(-50%, -50%) scale(1); }
+}

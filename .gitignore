@@ -1,0 +1,56 @@
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+
+# Testing
+/coverage
+
+# Production
+/build
+/dist
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# ML Models
+*.bin
+*.h5
+*.pkl
+*.model
+*.pt
+
+# Large files
+*.zip
+*.tar.gz
+*.rar
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+
+models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
+models/tinyllama-1.1b-chat-v1.0.Q4_K_M.gguf
